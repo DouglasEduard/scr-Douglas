@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="SCR2WebApp.Service.SCR2Service" CodeBehind="SCR2Service.svc.cs" %>
