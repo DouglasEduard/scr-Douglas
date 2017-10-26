@@ -6,6 +6,8 @@ using System.ServiceModel;
 using System.ServiceModel.Activation;
 using System.ServiceModel.Web;
 using System.Text;
+using SCR2WebApp.Models;
+using SCR2WebApp.DataLayer;
 
 namespace SCR2WebApp.Service
 {
@@ -16,7 +18,20 @@ namespace SCR2WebApp.Service
     {        
         public string DoWork()
         {
-            return "hello REST Wcf service!";
-        }
+            try
+            {
+                CompanyDetail company = new CompanyDetail { CompanyId = "123", CompanyName = "My company" };
+
+                SCR2CompanyContext db = new SCR2CompanyContext();
+
+                db.Add(company);
+            }
+            catch(Exception e)
+            {
+                return "Error: " + e.Message;
+            }
+
+            return "Ok, Company saved successfully!";
+        }        
     }
 }

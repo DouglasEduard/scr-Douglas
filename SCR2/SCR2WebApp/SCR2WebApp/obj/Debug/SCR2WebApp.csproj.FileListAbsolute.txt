@@ -71,3 +71,8 @@ C:\Files\Projects\SCR2\SCR\scr-Douglas\SCR2\SCR2WebApp\SCR2WebApp\bin\pt-br\Syst
 C:\Files\Projects\SCR2\SCR\scr-Douglas\SCR2\SCR2WebApp\SCR2WebApp\bin\pt-br\System.Web.WebPages.Razor.resources.dll
 C:\Files\Projects\SCR2\SCR\scr-Douglas\SCR2\SCR2WebApp\SCR2WebApp\obj\Debug\SCR2WebApp.dll
 C:\Files\Projects\SCR2\SCR\scr-Douglas\SCR2\SCR2WebApp\SCR2WebApp\obj\Debug\SCR2WebApp.pdb
+C:\Files\Projects\SCR2\SCR\scr-Douglas\SCR2\SCR2WebApp\SCR2WebApp\bin\EntityFramework.dll
+C:\Files\Projects\SCR2\SCR\scr-Douglas\SCR2\SCR2WebApp\SCR2WebApp\bin\EntityFramework.SqlServer.dll
+C:\Files\Projects\SCR2\SCR\scr-Douglas\SCR2\SCR2WebApp\SCR2WebApp\bin\EntityFramework.xml
+C:\Files\Projects\SCR2\SCR\scr-Douglas\SCR2\SCR2WebApp\SCR2WebApp\bin\EntityFramework.SqlServer.xml
+C:\Files\Projects\SCR2\SCR\scr-Douglas\SCR2\SCR2WebApp\SCR2WebApp\obj\Debug\SCR2WebApp.csprojResolveAssemblyReference.cache
