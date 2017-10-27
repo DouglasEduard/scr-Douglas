@@ -1,0 +1,6 @@
+CREATE TABLE Company (
+	ID uniqueidentifier NOT NULL DEFAULT NEWID(),
+	CompanyName VARCHAR(60) NOT NULL,
+	CompanyID VARCHAR(30) NOT NULL,
+	CONSTRAINT PK_Company PRIMARY KEY (ID)
+)
