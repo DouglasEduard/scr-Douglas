@@ -1,7 +1,60 @@
 ﻿@{
     ViewBag.Title = "SCR System";
 }
-
-<div class="jumbotron">
-    <button onclick="AjaxGet(); return false;">DoWork</button>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="~/Scripts/SCRScripts/Index.js"></script>
+</head>
+<body>
+    <div class="body-content">
+        @*<button onclick="AjaxGet('Service/SCR2Service.svc/DoWork'); return false;">DoWork</button>*@
+            
+        <form class="form-horizontal" id="SCRCandidateUser">
+            <div class="form-group">
+                <label for="full_name_id" class="control-label col-sm-2">Full Name</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="index_full_name_id" name="full_name" placeholder="John Deer">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email_id" class="control-label col-sm-2">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="index_EMail" name="email_name" placeholder="name@domain.com">
+                    <p class="help-text">We value your privacy and will never sell your email address.</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2">I want to</label>
+                <div class="col-sm-10">
+                    <div class="radio">
+                        <label class="radio">
+                            <input name="Index_SCR_UseOption" type="radio" value="0" />
+                            offer my products and services
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label class="radio">
+                            <input name="Index_SCR_UseOption" type="radio" value="1" />
+                            request quotation of products and services to my suppliers
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label class="radio">
+                            <input name="Index_SCR_UseOption" type="radio" value="2" />
+                            provide and request quotation
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-10 col-sm-offset-2">
+                    <button onclick="Index_NewUserCandidate(); return false" class="btn btn-primary">Request your access!</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

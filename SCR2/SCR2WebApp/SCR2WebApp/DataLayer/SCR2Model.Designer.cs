@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Files\Projects\SCR2\SCR\scr-Douglas\SCR2\SCR2WebApp\SCR2WebApp\Service\SCR2Model.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Files\Projects\SCR2\SCR\scr-Douglas\SCR2\SCR2WebApp\SCR2WebApp\DataLayer\SCR2Model.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

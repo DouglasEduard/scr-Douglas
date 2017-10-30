@@ -1,10 +1,23 @@
-﻿function AjaxGet() {
+﻿function AjaxGet(url) {
     $.ajax({
-        url: "Service/SCR2Service.svc/DoWork",
+        url: url,
         type: "GET",
         dataType: "json",
         success: function (result) {
-            console.info(result);
+            return result;
         }
     });
 };
+
+function AjaxPost(url, value) {    
+    $.ajax({
+        url: url,
+        type: "POST",
+        data: JSON.stringify(value),
+        dataType: "json",
+        contentType: "application/json",
+        success: function (result) {
+            return result;
+        }
+    });
+}

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SCR2WebApp.Service
+namespace SCR2WebApp.DataLayer
 {
     using System;
     using System.Collections.Generic;

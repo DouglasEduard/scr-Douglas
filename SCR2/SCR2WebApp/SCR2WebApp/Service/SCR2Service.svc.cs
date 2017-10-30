@@ -32,6 +32,11 @@ namespace SCR2WebApp.Service
             }
 
             return "Ok, Company saved successfully!";
-        }        
+        }
+
+        public int AddNewUserCandidate(CandidateUserDetail CandidateUserDetail)
+        {
+            return SCR2IndexRequestsProcess.AddNewCandidateUser(CandidateUserDetail);
+        }
     }
 }

@@ -4,7 +4,17 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="SCR2_DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="SCR2_DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CandidateUser">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="CandidateUserEMail" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CandidateUserName" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="CandidateUserEMail" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="CandidateUserSelectedOption" Type="int" Nullable="false" />
+        </EntityType>
         <EntityType Name="Company">
           <Key>
             <PropertyRef Name="ID" />
@@ -14,10 +24,10 @@
           <Property Name="CompanyID" Type="varchar" MaxLength="30" Nullable="false" />
         </EntityType>
         <EntityContainer Name="SCR2_DBModelStoreContainer">
+          <EntitySet Name="CandidateUser" EntityType="Self.CandidateUser" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Company" EntityType="Self.Company" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="SCR2_DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -31,7 +41,18 @@
         </EntityType>
         <EntityContainer Name="SCR2_DBEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Company" EntityType="Self.Company" />
+          <EntitySet Name="CandidateUser" EntityType="SCR2_DBModel.CandidateUser" />
         </EntityContainer>
+        <EntityType Name="CandidateUser">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="CandidateUserEMail" />
+          </Key>
+          <Property Name="ID" Type="Guid" Nullable="false" />
+          <Property Name="CandidateUserName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CandidateUserEMail" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CandidateUserSelectedOption" Type="Int32" Nullable="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -44,6 +65,16 @@
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
                 <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CandidateUser">
+            <EntityTypeMapping TypeName="SCR2_DBModel.CandidateUser">
+              <MappingFragment StoreEntitySet="CandidateUser">
+                <ScalarProperty Name="CandidateUserSelectedOption" ColumnName="CandidateUserSelectedOption" />
+                <ScalarProperty Name="CandidateUserEMail" ColumnName="CandidateUserEMail" />
+                <ScalarProperty Name="CandidateUserName" ColumnName="CandidateUserName" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

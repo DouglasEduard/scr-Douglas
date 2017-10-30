@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SCR2WebApp.Service
+namespace SCR2WebApp.DataLayer
 {
     using System;
     using System.Data.Entity;
@@ -26,5 +26,6 @@ namespace SCR2WebApp.Service
         }
     
         public virtual DbSet<Company> Company { get; set; }
+        public virtual DbSet<CandidateUser> CandidateUser { get; set; }
     }
 }
